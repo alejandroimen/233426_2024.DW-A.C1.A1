@@ -1,0 +1,22 @@
+<div id="edit_form">
+    <form action="">
+        <div *ngIf="true">
+            <label for="name">ID</label>
+            <input type="text" name="id" id="id" disabled [value]="user.id">
+        </div>
+        <label for="">Name</label>
+        <input type="text" name="name" id="" [(ngModel)]="user.name"> <br>
+        <label for="">Username</label>
+        <input type="text" name="username" id="" [(ngModel)]="user.username"> <br>
+        <label for="">Email</label>
+        <input type="text" name="email" id="" [(ngModel)]="user.email"> <br>
+        <label for="">Phone</label>
+        <input type="text" name="phone" id="" [(ngModel)]="user.phone"> <br>
+        <label for="">Website</label>
+        <input type="text" name="website" id="" [(ngModel)]="user.website"> <br>
+
+
+    </form>
+
+    <button id="boton-enviar" (click)="enviar()">ACTIVAR</button>
+</div>
