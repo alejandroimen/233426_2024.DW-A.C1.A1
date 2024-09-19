@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Second-App": {
+    "PracticaUsers": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/second-app",
+            "outputPath": "dist/practica-users",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -39,7 +39,12 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -69,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Second-App:build:production"
+              "buildTarget": "PracticaUsers:build:production"
             },
             "development": {
-              "buildTarget": "Second-App:build:development"
+              "buildTarget": "PracticaUsers:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -102,8 +107,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "2b36b456-8546-4bf3-8f54-f7749e5880f9"
   }
 }
